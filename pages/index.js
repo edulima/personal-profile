@@ -77,7 +77,7 @@ export default function Home() {
             <span className="animate-pulse text-blue-800 font-bold pr-2">
               {'>>'}
             </span> 
-            Hello, I\'m Eddie
+            Hello, I am Eddie
           </p>
           <h1 className="text-5xl pt-2">Fullstack Web Developer</h1>
           <p className="text-2xl pt-2">
