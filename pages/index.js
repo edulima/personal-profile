@@ -60,7 +60,8 @@ export default function Home() {
       </div>
       <div className={cx([
         "grid",
-        "p-20",
+        "px-10",
+        "py-20",
         "2xl:px-80",
         "grid-cols-1",
         "to-black-900",
@@ -79,11 +80,11 @@ export default function Home() {
             </span> 
             Hello, I am Eddie
           </p>
-          <h1 className="text-5xl pt-2">Fullstack Web Developer</h1>
+          <h1 className="text-5xl pt-2">Full-stack Web Developer</h1>
           <p className="text-2xl pt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <div className="grid grid-cols-2 gap-4 py-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
             <Button>View Portfolio</Button>
             <Button secondary>Contact me</Button>
           </div>
@@ -111,7 +112,8 @@ export default function Home() {
       </div>
       <div className={cx([
           "grid",
-          "px-20",
+          "px-8",
+          "sm:px-20",
           "py-20",
           "2xl:px-80",
           "text-center",
@@ -169,14 +171,15 @@ export default function Home() {
       </div>
       <div className={cx([
           "grid",
-          "px-20",
+          "px-10",
           "py-20",
+          "sm:px-20",
           "2xl:px-80",
           "grid-cols-1",
           "text-center",
           "lg:text-left",
           "bg-gray-800",
-          "md:grid-cols-3",
+          "md:grid-cols-3 gap-2",
         ])}
       >
         <div className="col-span-1 md:col-span-3">
@@ -185,8 +188,7 @@ export default function Home() {
         {experienceData().map((e) => {
           return (
             <div key={e.employer} className={cx([
-              "my-4", 
-              "mx-2", 
+              "my-4",
               "py-6", 
               "px-3", 
               "w-full", 
@@ -208,9 +210,9 @@ export default function Home() {
       </div>
       <div className={cx([
           "grid",
-          "py-20",
           "gap-4",
-          "px-20",
+          "py-20",
+          "sm:px-20",
           "2xl:px-80",
           "text-center", 
           "grid-cols-1",
@@ -249,7 +251,7 @@ export default function Home() {
       <div className={cx([
           "grid",
           "py-4",
-          "px-20",
+          "sm:px-20",
           "space-y-4",
           "2xl:px-80",
           "grid-cols-3",
@@ -290,7 +292,7 @@ export default function Home() {
           </IconWrapper>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 p-20 gap-4 2xl:px-80">
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:px-20 py-20 gap-4 2xl:px-80">
         <div className="space-y-7">
           <ContactDetails label="My email" text="eddie.email@email.com" />
           <ContactDetails label="Phone number" text="+44 7565 5656 5656" />
