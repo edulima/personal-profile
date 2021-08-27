@@ -77,19 +77,19 @@ export default function Home() {
             <span className="animate-pulse text-blue-800 font-bold pr-2">
               {'>>'}
             </span> 
-            Hello, I'm Eddie
+            Hello, I\'m Eddie
           </p>
           <h1 className="text-5xl pt-2">Fullstack Web Developer</h1>
           <p className="text-2xl pt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <div className="grid grid-cols-2 gap-4 py-4">
-            <Button children="View Portfolio" />
-            <Button children="Contact me" secondary />
+            <Button>View Portfolio</Button>
+            <Button secondary>Contact me</Button>
           </div>
         </div>
-        <div class="relative py-3 sm:max-w-xl mx-auto mt-16 lg:mt-0">
-          <div class={cx([
+        <div className="relative py-3 sm:max-w-xl mx-auto mt-16 lg:mt-0">
+          <div className={cx([
             "inset-0",
             "absolute",
             "shadow-lg",
@@ -102,8 +102,8 @@ export default function Home() {
             "from-blue-900",
             "bg-gradient-to-r",
           ])}></div>
-          <div class="relative bg-white shadow-lg rounded-3xl overflow-hidden">
-            <div class="max-w-md mx-auto">
+          <div className="relative bg-white shadow-lg rounded-3xl overflow-hidden">
+            <div className="max-w-md mx-auto">
               <Image src={devImg} width="500" height="500" />
             </div>
           </div>
@@ -168,23 +168,23 @@ export default function Home() {
         </div>
       </div>
       <div className={cx([
-        "grid",
-        "px-20",
-        "py-20",
-        "2xl:px-80",
-        "grid-cols-1",
-        "text-center",
-        "lg:text-left",
-        "bg-gray-800",
-        "md:grid-cols-3",
+          "grid",
+          "px-20",
+          "py-20",
+          "2xl:px-80",
+          "grid-cols-1",
+          "text-center",
+          "lg:text-left",
+          "bg-gray-800",
+          "md:grid-cols-3",
         ])}
-        >
+      >
         <div className="col-span-1 md:col-span-3">
           <H2 text="Previous experience" />
         </div>
         {experienceData().map((e) => {
           return (
-            <div className={cx([
+            <div key={e.employer} className={cx([
               "my-4", 
               "mx-2", 
               "py-6", 
@@ -203,7 +203,7 @@ export default function Home() {
           )
         })}
         <div className="col-span-1 md:col-span-3 text-center">
-          <Button children="Download CV" />
+          <Button>Download CV</Button>
         </div>
       </div>
       <div className={cx([
@@ -222,7 +222,7 @@ export default function Home() {
         </div>
         { latestProjectsData().map((e) => {
           return (
-            <div className="rounded bg-gray-800 px-8 py-5">
+            <div className="rounded bg-gray-800 px-8 py-5" key={e.project}>
               <div className="flex flex-col">
                 <div>
                   <div className={cx([
@@ -291,7 +291,7 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 p-20 gap-4 2xl:px-80">
-        <div class="space-y-7">
+        <div className="space-y-7">
           <ContactDetails label="My email" text="eddie.email@email.com" />
           <ContactDetails label="Phone number" text="+44 7565 5656 5656" />
           <ContactDetails label="Skype id" text="eddie.dev" />
@@ -303,10 +303,9 @@ export default function Home() {
             <input type="text" className="p-2 rounded text-black" placeholder="Bob Smith" />
             <label>Email</label>
             <input type="email" className="p-2 rounded text-black" placeholder="bob@smith.email.com" />
-
             <label>Message</label>
             <textarea type="textarea" className="px-2 rounded text-black h-24" placeholder="Hello Eddie..." />
-            <Button children="Get in touch" />          
+            <Button>Get in touch</Button>          
           </div>
         </div>
       </div>
