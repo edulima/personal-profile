@@ -171,6 +171,7 @@ export default function Home() {
       </div>
       <div className={cx([
           "grid",
+          "gap-2",
           "px-10",
           "py-20",
           "sm:px-20",
@@ -179,7 +180,7 @@ export default function Home() {
           "text-center",
           "lg:text-left",
           "bg-gray-800",
-          "md:grid-cols-3 gap-2",
+          "md:grid-cols-3",
         ])}
       >
         <div className="col-span-1 md:col-span-3">
@@ -192,10 +193,13 @@ export default function Home() {
               "py-6", 
               "px-3", 
               "w-full", 
-              "rounded", 
+              "rounded",
               "border-2", 
               "md:w-auto", 
+              "shadow-2xl",
               "text-center",
+              "bg-gray-900", 
+              "border-blue-500",
             ])}
           >
             <p className="text-xl font-extrabold">{e.employer}</p>
@@ -204,7 +208,7 @@ export default function Home() {
           </div>
           )
         })}
-        <div className="col-span-1 md:col-span-3 text-center">
+        <div className="col-span-1 md:col-span-3 pt-3 text-center">
           <Button>Download CV</Button>
         </div>
       </div>
@@ -224,7 +228,15 @@ export default function Home() {
         </div>
         { latestProjectsData().map((e) => {
           return (
-            <div className="rounded bg-gray-800 px-8 py-5" key={e.project}>
+            <div key={e.project} className={cx([
+                "px-8",
+                "py-5",
+                "shadow-2xl",
+                "sm:rounded",
+                "rounded-none",
+                "bg-gray-800",
+              ])}
+            >
               <div className="flex flex-col">
                 <div>
                   <div className={cx([
@@ -234,11 +246,12 @@ export default function Home() {
                       "-rotate-1",
                       "transform",
                       "bg-white",
+                      "shadow-2xl",
                     ])}
                   >
                     <Image src={devImg} width="500" height="500" />
                   </div>
-                  <div className="pt-5 text-lg text-blue-500 font-bold">
+                  <div className="pt-5 text-xl text-blue-500 font-bold">
                     {e.project}
                   </div>
                   <div className="pb-2">{e.stack}</div>
@@ -250,9 +263,8 @@ export default function Home() {
       </div>
       <div className={cx([
           "grid",
-          "py-4",
+          "gap-4",
           "sm:px-20",
-          "space-y-4",
           "2xl:px-80",
           "grid-cols-3",
           "lg:text-left",
@@ -261,33 +273,33 @@ export default function Home() {
           "place-items-center",
         ])}
       >
-        <div className="w-min bg-gray-800 rounded-full p-4">
-          <IconWrapper color="#E06C00">
+        <div className="w-min bg-yellow-600 rounded-full p-4">
+          <IconWrapper>
             <FaJava size={60} />
           </IconWrapper>
         </div>
-        <div className="w-min bg-gray-800 rounded-full p-4">
-          <IconWrapper color="#7377AD">
+        <div className="w-min bg-indigo-400	rounded-full p-4">
+          <IconWrapper>
             <FaPhp size={60} />
           </IconWrapper>
         </div>        
-        <div className="w-min bg-gray-800 rounded-full p-4">
-          <IconWrapper color="#EDD718">
+        <div className="w-min bg-yellow-400 rounded-full p-4">
+          <IconWrapper>
             <FaJsSquare size={60} />
           </IconWrapper>
         </div>
-        <div className="w-min bg-gray-800 rounded-full p-4">
-          <IconWrapper color="#C76494">
+        <div className="w-min bg-pink-500 rounded-full p-4">
+          <IconWrapper>
             <FaSass size={60} />
           </IconWrapper>
         </div>
-        <div className="w-min bg-gray-800 rounded-full p-4">
-          <IconWrapper color="#E0E0E0">
+        <div className="w-min bg-purple-700 rounded-full p-4">
+          <IconWrapper>
             <FaGithubAlt size={60} />
           </IconWrapper>
         </div>
-        <div className="w-min bg-gray-800 rounded-full p-4">
-          <IconWrapper color="#E80E12">
+        <div className="w-min bg-red-900 rounded-full p-4">
+          <IconWrapper>
             <FaGem size={60} />
           </IconWrapper>
         </div>
@@ -299,7 +311,7 @@ export default function Home() {
           <ContactDetails label="Skype id" text="eddie.dev" />
         </div>
         <div>
-          <div className="flex flex-col space-y-4 bg-gray-800 p-10 rounded">
+          <div className="flex flex-col space-y-4 bg-gray-800 p-10 rounded-none sm:rounded">
             <H2 text="Say hello :)" />
             <label>Name</label>
             <input type="text" className="p-2 rounded text-black" placeholder="Bob Smith" />

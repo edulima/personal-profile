@@ -16,6 +16,7 @@ const Button = ({
       'py-2': true,
       'w-full': full,
       'rounded': true,
+      'shadow-2xl': true,
       'text-center': true,
       'bg-white': secondary,
       'hover:bg-white': true,
