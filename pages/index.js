@@ -1,5 +1,8 @@
 import cx from 'classnames'
+
 import Head from 'next/head'
+import Image from 'next/image'
+import devImg from "../public/static/images/dev.png"
 
 import H2 from './components/h2'
 import Button from './components/button'
@@ -101,7 +104,7 @@ export default function Home() {
           ])}></div>
           <div class="relative bg-white shadow-lg rounded-3xl overflow-hidden">
             <div class="max-w-md mx-auto">
-              <img src="https://templatekit.jegtheme.com/enrique/wp-content/uploads/sites/96/2021/05/image-CCXAYZL.png" />
+              <Image src={devImg} width="500" height="500" />
             </div>
           </div>
         </div>
@@ -146,9 +149,9 @@ export default function Home() {
                 <FaUserTie size={60} />
               </div>
               <p className="text-2xl pt-2 font-extrabold text-blue-500">
-                6 Years
+                6 Tellus
               </p>
-              <p>of experience</p>
+              <p>eu posuere</p>
             </IconWrapper> 
           </div>
           <div className="text-center max-w-max p-4">
@@ -157,9 +160,9 @@ export default function Home() {
                 <FaBalanceScale size={60} />
               </div>
               <p className="text-2xl pt-2 font-extrabold text-blue-500">
-                Private & Public
+                Vestibulum vel
               </p>
-              <p>sectors experience</p>
+              <p>dictum eu ut</p>
             </IconWrapper>
           </div>
         </div>
@@ -231,7 +234,7 @@ export default function Home() {
                       "bg-white",
                     ])}
                   >
-                    <img src="https://templatekit.jegtheme.com/enrique/wp-content/uploads/sites/96/2021/05/image-CCXAYZL.png" />
+                    <Image src={devImg} width="500" height="500" />
                   </div>
                   <div className="pt-5 text-lg text-blue-500 font-bold">
                     {e.project}
